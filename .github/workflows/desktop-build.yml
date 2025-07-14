@@ -37,6 +37,7 @@ jobs:
       - name: Download FFmpeg for current architecture
         run: |
           cd apps/desktop
+          chmod +x ./scripts/download-ffmpeg.sh
           ARCH=$(uname -m)
           if [[ "$ARCH" == "arm64" ]]; then
             ./scripts/download-ffmpeg.sh --arch aarch64
