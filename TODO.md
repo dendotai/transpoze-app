@@ -27,6 +27,7 @@
 - [ ] When file pattern is empty, it shows weirdly looking suggestion (bold or duplicate text)
 - [ ] Show human readable size of the file in the queue
 - [ ] Make buttons more consistent
+- [ ] Change wording from "Conversion" to "Transcoding" where appropriate.
 
 ## Functionality
 

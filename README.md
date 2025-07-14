@@ -1,30 +1,18 @@
 # Transvibe.app
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
+![macOS](https://img.shields.io/badge/macOS-supported-green.svg)
+![Linux](https://img.shields.io/badge/Linux-planned-yellow.svg)
+![Windows](https://img.shields.io/badge/Windows-planned-yellow.svg)
 
-> [!WARNING]  
+> [!NOTE]
 > This app was vibe-coded in a single redbull-fueled and kebab-refueled evening.
-> 
+>
 > Looking at the code may cause existential dread.
-> 
+>
 > Built with the 'useEffect until it works' pattern.
 
 A fast, modern desktop app for converting WebM videos to MP4 format. Built with Tauri, React, and TypeScript.
-
-## Goal 
-
-An exploration of whether vibe-coding can lead to an unmanageable mess of spaghetti code. Apparently not achieved yet.
-
-## Features
-
-- 🎬 **Batch Conversion**: Convert multiple WebM files at once with drag-and-drop
-- 🎯 **Quality Presets**: Choose from High, Balanced, Web, or Mobile quality settings
-- 📊 **Progress Tracking**: Real-time conversion progress with queue management
-- 🗂️ **Flexible Output**: Save to custom directory or alongside source files
-- 📝 **Conversion History**: Track all your past conversions
-- 🖼️ **Video Thumbnails**: Preview your videos before conversion
-- 🚀 **Native Performance**: Bundled FFmpeg for fast, dependency-free conversion
 
 ## Screenshots
 
@@ -38,16 +26,44 @@ An exploration of whether vibe-coding can lead to an unmanageable mess of spaghe
 ![Transvibe.app Settings](content/settings.png)
 *Customize output location, file naming patterns, and display preferences*
 
+## Goal
+
+An exploration of whether vibe-coding can lead to an unmanageable mess of spaghetti code. Apparently not achieved yet.
+
+## Features
+
+- 🎬 **Batch Conversion**: Convert multiple WebM files at once with drag-and-drop
+- 🎯 **Quality Presets**: Choose from High, Balanced, Web, or Mobile quality settings
+- 📊 **Progress Tracking**: Real-time conversion progress with queue management
+- 🗂️ **Flexible Output**: Save to custom directory or alongside source files
+- 📝 **Conversion History**: Track all your past conversions
+- 🖼️ **Video Thumbnails**: Preview your videos before conversion
+- 🚀 **Native Performance**: Bundled FFmpeg for fast, dependency-free conversion
+
 ## Download
 
-**Note**: Releases are not available yet. The app is currently in development.
+**Note**: Releases are not available yet. The app is in development since yesterday.
 
 Once available, you'll be able to download from the [Releases](https://github.com/dendotai/transvibe-app/releases) page.
 
-For macOS users:
+### Platform Support
+
+**macOS** (Currently supported):
 
 - **Universal Binary**: Works on both Intel and Apple Silicon Macs
 - **No dependencies**: FFmpeg is bundled with the app
+
+**Linux** (Planned):
+
+- Native .AppImage and .deb packages
+- Bundled FFmpeg for distribution independence
+- Support for major distributions (Ubuntu, Fedora, Arch)
+
+**Windows** (Planned):
+
+- Native .exe installer
+- Bundled FFmpeg (no manual installation needed)
+- Windows 10/11 support
 
 ## Usage
 
@@ -63,7 +79,7 @@ Coming soon:
 
 - Node.js 16+ and npm
 - Rust 1.82+
-- macOS (for now; Linux/Windows support planned)
+- macOS, Linux, or Windows (currently macOS only; Linux/Windows support coming soon)
 - jq (for FFmpeg download script): `brew install jq`
 
 ### Quick Start
