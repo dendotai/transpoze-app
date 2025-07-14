@@ -22,21 +22,24 @@ desktop-release: lint type-check desktop-build  ## Build desktop release (with l
 	@echo "📦 Release build complete!"
 	@echo "Find your app in: apps/desktop/src-tauri/target/release/bundle/"
 
-release:  ## Prepare a new release (bump version, commit, tag)
+prepare-release:  ## Prepare a new release (bump version, commit, tag)
 	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
 		echo "❌ Error: Version is required"; \
-		echo "Usage: make release 1.0.0"; \
+		echo "Usage: make prepare-release 1.0.0"; \
 		exit 1; \
 	fi
 	@echo "🚀 Preparing release v$(filter-out $@,$(MAKECMDGOALS))..."
-	@bun run scripts/release.ts -v $(filter-out $@,$(MAKECMDGOALS))
+	@bun run scripts/prepare-release.ts -v $(filter-out $@,$(MAKECMDGOALS))
+
+release:  ## Push the prepared release to GitHub (triggers release workflow)
+	@bun run scripts/release.ts
 
 # Catch version argument
 %:
 	@:
 
 version:  ## Show current desktop app version
-	@bun run scripts/get-version.ts
+	@bun run scripts/version.ts
 
 ## Code Quality
 
