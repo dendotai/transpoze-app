@@ -43,6 +43,7 @@ jobs:
       - name: Download FFmpeg for target architecture
         run: |
           cd apps/desktop
+          chmod +x ./scripts/download-ffmpeg.sh
           if [[ "${{ matrix.args }}" == *"aarch64"* ]]; then
             ./scripts/download-ffmpeg.sh --arch aarch64
           else

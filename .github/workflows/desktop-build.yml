@@ -7,15 +7,18 @@ on:
     paths:
       - 'apps/desktop/**'
       - '.github/workflows/desktop/**'
-  pull_request:
+  pull_request_target:
     branches: [ main ]
     paths:
       - 'apps/desktop/**'
       - '.github/workflows/desktop/**'
+    types: [opened, synchronize, reopened]
 
 jobs:
   test:
     runs-on: macos-latest
+    # Only run for PRs from the same repository (not forks)
+    if: github.event_name == 'push' || (github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.full_name == github.repository)
     
     steps:
       - uses: actions/checkout@v4
