@@ -1,0 +1,30 @@
+{
+  "name": "transvibe-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "desktop:dev": "bun run --cwd apps/desktop tauri:dev",
+    "desktop:build": "bun run --cwd apps/desktop tauri:build",
+    "desktop:preview": "bun run --cwd apps/desktop preview",
+    "lint": "bun run lint:ts && bun run lint:md && bun run lint:prettier",
+    "lint:ts": "eslint . --ext .ts,.tsx --fix",
+    "lint:md": "markdownlint '**/*.md' --fix",
+    "lint:prettier": "prettier --write '**/*.{json,css,html}' --ignore-path .gitignore",
+    "type-check": "bun run --filter '*' type-check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0",
+    "markdownlint-cli": "^0.45.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.6.2"
+  }
+}

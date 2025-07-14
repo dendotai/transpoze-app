@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+bun-debug.log*
+
+# Dependencies
+node_modules
+bun.lockb
+
+# Build outputs
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Tauri (desktop app)
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/WixTools/
+apps/desktop/src-tauri/converted/
+
+# FFmpeg binaries (downloaded by setup script)
+apps/desktop/src-tauri/binaries/ffmpeg-*
+# But keep the version info file
+!apps/desktop/src-tauri/binaries/ffmpeg-version.json
+
+# Test files
+convert/

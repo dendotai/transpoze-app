@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(mv:*)",
+      "Bash(rmdir:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run tauri:*)",
+      "Bash(git add:*)",
+      "Bash(rm:*)",
+      "Bash(bun install:*)",
+      "Bash(bun add:*)",
+      "Bash(bun run lint:*)",
+      "Bash(bun run:*)",
+      "Bash(chmod:*)",
+      "Bash(make:*)",
+      "Bash(mkdir:*)",
+      "Bash(cargo clean:*)",
+      "Bash(grep:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(touch:*)",
+      "Bash(cargo test:*)",
+      "Bash(find:*)",
+      "Bash(cargo check:*)",
+      "Bash(kill:*)"
+    ],
+    "deny": []
+  }
+}

@@ -1,0 +1,66 @@
+name: Desktop - Release
+
+on:
+  push:
+    tags:
+      - 'desktop-v*'
+  workflow_dispatch:
+
+jobs:
+  release:
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: 'macos-latest' # for Arm based macs (M1 and above)
+            args: '--target aarch64-apple-darwin'
+          - platform: 'macos-latest' # for Intel based macs
+            args: '--target x86_64-apple-darwin'
+
+    runs-on: ${{ matrix.platform }}
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Install jq
+        run: brew install jq || true
+
+      - name: Download FFmpeg for target architecture
+        run: |
+          cd apps/desktop
+          if [[ "${{ matrix.args }}" == *"aarch64"* ]]; then
+            ./scripts/download-ffmpeg.sh --arch aarch64
+          else
+            ./scripts/download-ffmpeg.sh --arch x86_64
+          fi
+
+      - name: Build Tauri App
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY || '' }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD || '' }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: 'TransVibe Desktop ${{ github.ref_name }}'
+          releaseBody: 'See the assets to download and install this version.'
+          releaseDraft: true
+          prerelease: false
+          args: ${{ matrix.args }}
+          projectPath: apps/desktop
+

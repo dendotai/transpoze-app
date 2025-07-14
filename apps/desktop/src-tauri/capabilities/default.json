@@ -1,0 +1,23 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-start-dragging",
+    "opener:default",
+    "fs:allow-read-file",
+    "fs:allow-write-file",
+    "fs:allow-read-dir",
+    "fs:allow-exists",
+    "fs:allow-applocaldata-write-recursive",
+    "fs:allow-applocaldata-read-recursive",
+    "fs:allow-appcache-read-recursive",
+    "fs:allow-appcache-write-recursive",
+    "fs:allow-create",
+    "dialog:allow-open",
+    "dialog:allow-save",
+    "shell:allow-execute"
+  ]
+}
