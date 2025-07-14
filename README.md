@@ -1,6 +1,6 @@
-# TransVibe
+# Transvibe.app
 
-Transform your video vibes. A fast, modern desktop app for converting WebM videos to MP4 format. Built with Tauri, React, and TypeScript.
+A fast, modern desktop app for converting WebM videos to MP4 format. Built with Tauri, React, and TypeScript.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
@@ -8,21 +8,43 @@ Transform your video vibes. A fast, modern desktop app for converting WebM video
 ## Features
 
 - 🎬 **Batch Conversion**: Convert multiple WebM files at once with drag-and-drop
-- 🎯 **Quality Presets**: Choose from High, Medium, Low, or Custom quality settings
+- 🎯 **Quality Presets**: Choose from High, Balanced, Web, or Mobile quality settings
 - 📊 **Progress Tracking**: Real-time conversion progress with queue management
 - 🗂️ **Flexible Output**: Save to custom directory or alongside source files
 - 📝 **Conversion History**: Track all your past conversions
-- 🖼️ **Video Thumbnails**: Preview your videos before conversion (coming soon)
+- 🖼️ **Video Thumbnails**: Preview your videos before conversion
 - 🚀 **Native Performance**: Bundled FFmpeg for fast, dependency-free conversion
+
+## Screenshots
+
+### Main Interface
+
+![Transvibe.app Main Interface](content/main.png)
+*Drag and drop your WebM files and choose from optimized quality presets*
+
+### Settings
+
+![Transvibe.app Settings](content/settings.png)
+*Customize output location, file naming patterns, and display preferences*
 
 ## Download
 
-Download the latest release from the [Releases](https://github.com/yourusername/transvibe/releases) page.
+**Note**: Releases are not available yet. The app is currently in development.
+
+Once available, you'll be able to download from the [Releases](https://github.com/dendotai/transvibe-app/releases) page.
 
 For macOS users:
 
 - **Universal Binary**: Works on both Intel and Apple Silicon Macs
 - **No dependencies**: FFmpeg is bundled with the app
+
+## Usage
+
+Coming soon:
+
+- **macOS**: [Download for Mac](https://github.com/dendotai/transvibe-app/releases)
+- **Linux**: [Download for Linux](https://github.com/dendotai/transvibe-app/releases)
+- **Windows**: [Download for Windows](https://github.com/dendotai/transvibe-app/releases)
 
 ## Development
 
@@ -38,14 +60,15 @@ For macOS users:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/transvibe.git
-   cd transvibe
+   git clone https://github.com/dendotai/transvibe-app.git
+   cd transvibe-app
    ```
 
 2. **Start developing**
 
    ```bash
-   make dev  # Installs deps, downloads FFmpeg, and starts dev server
+   make setup   # One-time setup: install deps and download FFmpeg
+   make dev     # Start the development server
    ```
 
 That's it! The Makefile handles all the setup automatically.
@@ -59,12 +82,13 @@ That's it! The Makefile handles all the setup automatically.
 #### Available Make commands
 
 ```bash
-make help        # Show all available commands
-make dev         # Start development (auto-setup included)
-make build       # Build the application
-make lint        # Run linters and fix issues
-make clean       # Clean build artifacts
-make check-prereqs # Check if all prerequisites are installed
+make help            # Show all available commands
+make setup           # Initial setup (install deps + download FFmpeg)
+make desktop-dev     # Start desktop development server
+make desktop-build   # Build the desktop application
+make lint            # Run linters and fix issues
+make type-check      # Run TypeScript type checking
+make clean           # Clean build artifacts
 ```
 
 ### FFmpeg Version Management
@@ -92,23 +116,6 @@ This creates:
 
 - `.app` bundle in `src-tauri/target/release/bundle/macos/`
 - `.dmg` installer in `src-tauri/target/release/bundle/dmg/`
-
-### Project Structure
-
-```text
-├── src/                    # React frontend
-│   ├── components/         # UI components
-│   ├── hooks/             # Custom React hooks
-│   └── utils/             # Utility functions
-├── src-tauri/             # Rust backend
-│   ├── src/               # Rust source code
-│   ├── binaries/          # FFmpeg binaries (git-ignored)
-│   └── icons/             # App icons
-├── scripts/               # Build and setup scripts
-│   ├── download-ffmpeg.sh # FFmpeg download script
-│   └── ffmpeg-versions.json # FFmpeg version registry
-└── convert/               # Example WebM files for testing
-```
 
 ## Technical Highlights
 
