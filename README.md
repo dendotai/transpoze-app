@@ -1,9 +1,20 @@
 # Transvibe.app
 
-A fast, modern desktop app for converting WebM videos to MP4 format. Built with Tauri, React, and TypeScript.
-
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
+
+> [!WARNING]  
+> This app was vibe-coded in a single redbull-fueled and kebab-refueled evening.
+> 
+> Looking at the code may cause existential dread.
+> 
+> Built with the 'useEffect until it works' pattern.
+
+A fast, modern desktop app for converting WebM videos to MP4 format. Built with Tauri, React, and TypeScript.
+
+## Goal 
+
+An exploration of whether vibe-coding can lead to an unmanageable mess of spaghetti code. Apparently not achieved yet.
 
 ## Features
 
