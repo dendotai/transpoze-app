@@ -12,7 +12,7 @@
 >
 > Built with the 'useEffect until it works' pattern.
 
-A fast, modern desktop app for converting WebM videos to MP4 format. Built with Tauri, React, and TypeScript.
+A fast, modern desktop app for transcoding WebM videos to MP4 format. Built with Tauri, React, and TypeScript.
 
 ## Screenshots
 
@@ -32,13 +32,13 @@ An exploration of whether vibe-coding can lead to an unmanageable mess of spaghe
 
 ## Features
 
-- 🎬 **Batch Conversion**: Convert multiple WebM files at once with drag-and-drop
+- 🎬 **Batch conversion**: Transcode multiple WebM files at once with drag-and-drop
 - 🎯 **Quality Presets**: Choose from High, Balanced, Web, or Mobile quality settings
 - 📊 **Progress Tracking**: Real-time conversion progress with queue management
 - 🗂️ **Flexible Output**: Save to custom directory or alongside source files
-- 📝 **Conversion History**: Track all your past conversions
-- 🖼️ **Video Thumbnails**: Preview your videos before conversion
-- 🚀 **Native Performance**: Bundled FFmpeg for fast, dependency-free conversion
+- 📝 **Conversion History**: Track all your past transcoding jobs
+- 🖼️ **Video Thumbnails**: Preview your videos before transcoding
+- 🚀 **Native Performance**: Bundled FFmpeg for fast, dependency-free transcoding
 
 ## Download
 
