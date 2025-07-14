@@ -6,6 +6,10 @@ on:
       - 'desktop-v*'
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   release:
     permissions:
@@ -16,7 +20,7 @@ jobs:
         include:
           - platform: 'macos-latest' # for Arm based macs (M1 and above)
             args: '--target aarch64-apple-darwin'
-          - platform: 'macos-latest' # for Intel based macs
+          - platform: 'macos-13' # for Intel based macs (use macos-13 for x86_64)
             args: '--target x86_64-apple-darwin'
 
     runs-on: ${{ matrix.platform }}
@@ -32,7 +36,7 @@ jobs:
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+          targets: ${{ contains(matrix.args, 'aarch64') && 'aarch64-apple-darwin' || 'x86_64-apple-darwin' }}
 
       - name: Install dependencies
         run: bun install --frozen-lockfile

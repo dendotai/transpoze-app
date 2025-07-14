@@ -15,11 +15,21 @@ async function getCurrentVersion() {
 async function getLatestTag(version: string) {
   const expectedTag = `desktop-v${version}`;
   try {
-    // Check if the tag exists
+    // Check if the tag exists locally
     await $`git rev-parse ${expectedTag}`.quiet();
     return expectedTag;
   } catch {
     return null;
+  }
+}
+
+async function isTagPushed(tag: string) {
+  try {
+    // Check if tag exists on remote
+    await $`git ls-remote origin refs/tags/${tag}`.quiet();
+    return true;
+  } catch {
+    return false;
   }
 }
 
@@ -33,10 +43,28 @@ async function checkUnpushedCommits() {
   }
 }
 
+async function getGitHubUrl() {
+  try {
+    const result = await $`git remote get-url origin`.quiet();
+    const url = result.text().trim();
+    
+    // Convert git URL to HTTPS URL
+    if (url.startsWith('git@github.com:')) {
+      return url.replace('git@github.com:', 'https://github.com/').replace('.git', '');
+    } else if (url.startsWith('https://github.com/')) {
+      return url.replace('.git', '');
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 async function main() {
   try {
     const version = await getCurrentVersion();
     const tag = await getLatestTag(version);
+    const repoUrl = await getGitHubUrl();
     
     console.log(`📦 Release Information:`);
     console.log(`  Version: ${version}`);
@@ -46,6 +74,17 @@ async function main() {
       console.error(`\n❌ Error: Tag desktop-v${version} not found`);
       console.error(`Run 'make prepare-release ${version}' first`);
       process.exit(1);
+    }
+    
+    // Check if tag is already pushed
+    const tagPushed = await isTagPushed(tag);
+    if (tagPushed) {
+      console.log(`\n✅ Release ${tag} has already been pushed!`);
+      if (repoUrl) {
+        console.log(`\n🔗 View release: ${repoUrl}/releases/tag/${tag}`);
+        console.log(`📦 Download artifacts: ${repoUrl}/actions`);
+      }
+      process.exit(0);
     }
     
     // Check for unpushed commits
@@ -77,7 +116,10 @@ async function main() {
     console.log('1. Check GitHub Actions for the build progress');
     console.log('2. Once the draft release is created, add release notes');
     console.log('3. Publish the release on GitHub');
-    console.log(`\n🔗 https://github.com/YOUR_REPO/releases/tag/${tag}`);
+    
+    if (repoUrl) {
+      console.log(`\n🔗 ${repoUrl}/releases/tag/${tag}`);
+    }
     
   } catch (error) {
     console.error('\n❌ Error:', error instanceof Error ? error.message : String(error));

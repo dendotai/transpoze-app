@@ -36,6 +36,10 @@
     ],
     "resources": [
       "binaries/*"
-    ]
+    ],
+    "macOS": {
+      "hardenedRuntime": false,
+      "entitlements": null
+    }
   }
 }

@@ -29,7 +29,9 @@
       "WebFetch(domain:evermeet.cx)",
       "WebFetch(domain:ffmpeg.martin-riedl.de)",
       "Bash(apps/desktop/src-tauri/binaries/ffmpeg-x86_64-apple-darwin -version)",
-      "Bash(apps/desktop/src-tauri/binaries/ffmpeg-aarch64-apple-darwin -version)"
+      "Bash(apps/desktop/src-tauri/binaries/ffmpeg-aarch64-apple-darwin -version)",
+      "Bash(gh repo view:*)",
+      "Bash(gh release view:*)"
     ],
     "deny": []
   }
