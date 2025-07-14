@@ -1,26 +1,16 @@
 {
-  "current": "7.1",
+  "current": "7.1.1",
   "versions": {
-    "7.1": {
+    "7.1.1": {
       "date": "2024-09-30",
       "intel": {
-        "url": "https://evermeet.cx/ffmpeg/ffmpeg-7.1.zip",
+        "url": "https://evermeet.cx/ffmpeg/ffmpeg-7.1.1.zip",
         "sha256": "optional-hash-here"
       },
       "arm64": {
-        "url": "https://evermeet.cx/ffmpeg/ffmpeg-7.1-arm64.zip",
-        "sha256": "optional-hash-here"
-      }
-    },
-    "7.0.2": {
-      "date": "2024-07-24",
-      "intel": {
-        "url": "https://evermeet.cx/ffmpeg/ffmpeg-7.0.2.zip",
-        "sha256": "optional-hash-here"
-      },
-      "arm64": {
-        "url": "https://evermeet.cx/ffmpeg/ffmpeg-7.0.2-arm64.zip",
-        "sha256": "optional-hash-here"
+        "url": "https://evermeet.cx/ffmpeg/ffmpeg-7.1.1.zip",
+        "sha256": "optional-hash-here",
+        "note": "Using Intel binary via Rosetta 2 - evermeet.cx doesn't provide ARM64 builds"
       }
     }
   }

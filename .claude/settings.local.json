@@ -22,7 +22,14 @@
       "Bash(cargo test:*)",
       "Bash(find:*)",
       "Bash(cargo check:*)",
-      "Bash(kill:*)"
+      "Bash(kill:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:evermeet.cx)",
+      "WebFetch(domain:ffmpeg.martin-riedl.de)",
+      "Bash(apps/desktop/src-tauri/binaries/ffmpeg-x86_64-apple-darwin -version)",
+      "Bash(apps/desktop/src-tauri/binaries/ffmpeg-aarch64-apple-darwin -version)"
     ],
     "deny": []
   }
