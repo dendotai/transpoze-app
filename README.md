@@ -28,7 +28,7 @@ A fast, modern desktop app for transcoding WebM videos to MP4 format. Built with
 
 ## Goal
 
-An exploration of whether vibe-coding can lead to an unmanageable mess of spaghetti code. Apparently not achieved yet.
+An exploration of whether vibe-coding can lead to an unmanageable mess of spaghetti code. Arguably, not achieved yet.
 
 ## Features
 
