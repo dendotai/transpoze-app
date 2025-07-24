@@ -1,5 +1,5 @@
 [package]
-name = "transpoze.app"
+name = "transpoze-app"
 version = "0.1.2"
 description = "Transform your video vibes - WebM to MP4 converter"
 authors = ["you"]
