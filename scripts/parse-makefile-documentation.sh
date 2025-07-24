@@ -17,7 +17,7 @@ if [ ! -f "$MAKEFILE" ]; then
 fi
 
 # Extract and format help
-echo -e "\n${BOLD}TransVibe - Available Commands${RESET}\n"
+echo -e "\n${BOLD}Transpoze - Available Commands${RESET}\n"
 
 # Parse sections and commands
 current_section=""

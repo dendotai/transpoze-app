@@ -1,4 +1,4 @@
-# Transvibe.app
+# Transpoze.app
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![macOS](https://img.shields.io/badge/macOS-supported-green.svg)
@@ -18,12 +18,12 @@ A fast, modern desktop app for transcoding WebM videos to MP4 format. Built with
 
 ### Main Interface
 
-![Transvibe.app Main Interface](content/main.png)
+![Transpoze.app Main Interface](content/main.png)
 *Drag and drop your WebM files and choose from optimized quality presets*
 
 ### Settings
 
-![Transvibe.app Settings](content/settings.png)
+![Transpoze.app Settings](content/settings.png)
 *Customize output location, file naming patterns, and display preferences*
 
 ## Goal
@@ -44,7 +44,7 @@ An exploration of whether vibe-coding can lead to an unmanageable mess of spaghe
 
 **Note**: Releases are not available yet. The app is in development since yesterday.
 
-Once available, you'll be able to download from the [Releases](https://github.com/dendotai/transvibe-app/releases) page.
+Once available, you'll be able to download from the [Releases](https://github.com/dendotai/transpoze-app/releases) page.
 
 ### Platform Support
 
@@ -69,9 +69,9 @@ Once available, you'll be able to download from the [Releases](https://github.co
 
 Coming soon:
 
-- **macOS**: [Download for Mac](https://github.com/dendotai/transvibe-app/releases)
-- **Linux**: [Download for Linux](https://github.com/dendotai/transvibe-app/releases)
-- **Windows**: [Download for Windows](https://github.com/dendotai/transvibe-app/releases)
+- **macOS**: [Download for Mac](https://github.com/dendotai/transpoze-app/releases)
+- **Linux**: [Download for Linux](https://github.com/dendotai/transpoze-app/releases)
+- **Windows**: [Download for Windows](https://github.com/dendotai/transpoze-app/releases)
 
 ## Development
 
@@ -87,8 +87,8 @@ Coming soon:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/dendotai/transvibe-app.git
-   cd transvibe-app
+   git clone https://github.com/dendotai/transpoze-app.git
+   cd transpoze-app
    ```
 
 2. **Start developing**

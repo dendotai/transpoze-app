@@ -15,7 +15,7 @@
     "allowImportingTsExtensions": true,
     "baseUrl": ".",
     "paths": {
-      "@transvibe/*": ["packages/*/src"]
+      "@transpoze-app/*": ["packages/*/src"]
     }
   },
   "references": [{ "path": "./apps/desktop" }],

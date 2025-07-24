@@ -24,7 +24,7 @@ jobs:
             args: '--target x86_64-apple-darwin'
 
     runs-on: ${{ matrix.platform }}
-    
+
     steps:
       - uses: actions/checkout@v4
 
@@ -62,10 +62,9 @@ jobs:
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD || '' }}
         with:
           tagName: ${{ github.ref_name }}
-          releaseName: 'TransVibe Desktop ${{ github.ref_name }}'
+          releaseName: 'Transpoze ${{ github.ref_name }}'
           releaseBody: 'See the assets to download and install this version.'
           releaseDraft: true
           prerelease: false
           args: ${{ matrix.args }}
           projectPath: apps/desktop
-

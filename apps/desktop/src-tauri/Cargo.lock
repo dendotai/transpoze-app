@@ -4382,8 +4382,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "transvibe"
-version = "0.1.0"
+name = "transpoze.app"
+version = "0.1.2"
 dependencies = [
  "base64 0.22.1",
  "chrono",

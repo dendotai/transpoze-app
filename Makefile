@@ -1,4 +1,4 @@
-# TransVibe Makefile
+# Transpoze.app Makefile
 # Run 'make' or 'make help' to see available commands
 
 .DEFAULT_GOAL := help

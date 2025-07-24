@@ -1,4 +1,4 @@
-# TransVibe - Implementation Notes
+# Transpoze.app - Implementation Notes
 
 ## Original Requirements
 

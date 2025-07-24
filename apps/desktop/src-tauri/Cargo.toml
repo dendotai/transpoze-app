@@ -1,5 +1,5 @@
 [package]
-name = "transvibe"
+name = "transpoze.app"
 version = "0.1.2"
 description = "Transform your video vibes - WebM to MP4 converter"
 authors = ["you"]
@@ -31,4 +31,3 @@ uuid = { version = "1.10", features = ["v4", "serde"] }
 chrono = { version = "0.4", features = ["serde"] }
 lazy_static = "1.5"
 base64 = "0.22"
-

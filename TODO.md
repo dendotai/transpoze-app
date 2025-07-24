@@ -54,8 +54,8 @@
 ## Visual
 
 - [ ] Change icon to something like "↦"
-- [ ] Add a "Transvibe" logo to the icon
-- [ ] Add a "Transvibe" logo to the app
+- [ ] Add a "Transpoze.app" logo to the icon
+- [ ] Add a "Transpoze.app" logo to the app
 - [ ] Try glass background
 
 ## Testing
@@ -76,4 +76,4 @@
 - [ ] PSP mode should be enabled by clicking 3 time on the app icon
 - [ ] When PSP mode is enable, the icon should change to psp icon
 
-[Log] Job details: – {id: "5119488d-4f8c-4263-80be-93bd99ea93b0", thumbnailPath: "/Users/den/Library/Caches/app.transvibe/thumbnails/5119488d-4f8c-4263-80be-93bd99ea93b0.jpg"} (Queue.tsx, line 41)
+[Log] Job details: – {id: "5119488d-4f8c-4263-80be-93bd99ea93b0", thumbnailPath: "/Users/den/Library/Caches/app.transpoze/thumbnails/5119488d-4f8c-4263-80be-93bd99ea93b0.jpg"} (Queue.tsx, line 41)

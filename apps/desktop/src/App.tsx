@@ -1,14 +1,14 @@
+import { History, Settings, Trash2, Video } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
+import './App.css';
+import { ConversionHistory } from './components/ConversionHistory';
+import { DisplaySettings } from './components/DisplaySettings';
 import { DropZone } from './components/DropZone';
+import { OutputSettings } from './components/OutputSettings';
 import { PresetSelector } from './components/PresetSelector';
 import { Queue } from './components/Queue';
-import { OutputSettings } from './components/OutputSettings';
-import { DisplaySettings } from './components/DisplaySettings';
-import { ConversionHistory } from './components/ConversionHistory';
 import { useConverter, useConverterEvents } from './hooks/useConverter';
-import { Video, Settings, History, Trash2 } from 'lucide-react';
 import { logger } from './utils/simpleLogger';
-import './App.css';
 
 type TabType = 'convert' | 'settings' | 'history';
 
@@ -27,14 +27,14 @@ function App() {
   const presetsLoaded = useConverter((state) => state.presetsLoaded);
   const jobs = useConverter((state) => state.jobs);
   const clearCompletedJobs = useConverter((state) => state.clearCompletedJobs);
-  
+
   useConverterEvents();
-  
+
   // Check if there are any completed or failed jobs to show the clear button
-  const hasCompletedOrFailed = jobs.some(job => 
-    job.status === 'completed' || job.status === 'failed'
+  const hasCompletedOrFailed = jobs.some(
+    (job) => job.status === 'completed' || job.status === 'failed',
   );
-  
+
   const navigateToSettings = (highlight = false) => {
     setActiveTab('settings');
     if (highlight) {
@@ -46,7 +46,7 @@ function App() {
       });
     }
   };
-  
+
   const clearHighlight = () => {
     setHighlightOutputSettings(false);
   };
@@ -65,9 +65,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center gap-3">
             <Video className="w-8 h-8 text-blue-500" />
-            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
-              Transvibe.app
-            </h1>
+            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Transpoze.app</h1>
           </div>
         </div>
       </header>
@@ -113,9 +111,7 @@ function App() {
 
               <section>
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                    Queue
-                  </h2>
+                  <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Queue</h2>
                   <button
                     onClick={clearCompletedJobs}
                     className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors ${hasCompletedOrFailed ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
@@ -140,9 +136,9 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-6">
               <div className="relative z-20">
-                <OutputSettings 
-                  highlighted={highlightOutputSettings} 
-                  onInteraction={clearHighlight} 
+                <OutputSettings
+                  highlighted={highlightOutputSettings}
+                  onInteraction={clearHighlight}
                 />
               </div>
               <DisplaySettings />

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
 import { invoke } from '@tauri-apps/api/core';
-import { X, Info } from 'lucide-react';
+import { Info, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface FFmpegVersionInfo {
   version: string;
@@ -33,12 +33,9 @@ export function AboutDialog({ isOpen, onClose }: AboutDialogProps) {
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold flex items-center gap-2">
             <Info className="w-5 h-5" />
-            About Transvibe.app
+            About Transpoze.app
           </h2>
-          <button
-            onClick={onClose}
-            className="p-1 hover:bg-gray-700 rounded transition-colors"
-          >
+          <button onClick={onClose} className="p-1 hover:bg-gray-700 rounded transition-colors">
             <X className="w-5 h-5" />
           </button>
         </div>

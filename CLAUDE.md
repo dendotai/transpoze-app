@@ -1,4 +1,4 @@
-# TransVibe Monorepo - Claude AI Assistant Guidelines
+# Transpoze.app Monorepo - Claude AI Assistant Guidelines
 
 ## Important Rules
 

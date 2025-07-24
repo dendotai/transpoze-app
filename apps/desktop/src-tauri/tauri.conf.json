@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Transvibe.app",
+  "productName": "Transpoze.app",
   "version": "0.1.2",
-  "identifier": "app.transvibe",
+  "identifier": "app.transpoze",
   "build": {
     "beforeDevCommand": "bun run dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Transvibe.app",
+        "title": "Transpoze.app",
         "width": 1200,
         "height": 800,
         "minWidth": 800,
@@ -34,9 +34,7 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "resources": [
-      "binaries/*"
-    ],
+    "resources": ["binaries/*"],
     "macOS": {
       "hardenedRuntime": false,
       "entitlements": null

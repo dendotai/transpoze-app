@@ -98,8 +98,8 @@ To avoid macOS security warnings, you should sign your app:
 
 Users will download architecture-specific builds:
 
-- **Intel Macs**: `TransVibe_0.1.0_x64.dmg`
-- **Apple Silicon Macs**: `TransVibe_0.1.0_aarch64.dmg`
+- **Intel Macs**: `Transpoze_0.1.0_x64.dmg`
+- **Apple Silicon Macs**: `Transpoze_0.1.0_aarch64.dmg`
 
 Each build contains only the FFmpeg binary for its architecture, keeping the app size minimal.
 

@@ -15,7 +15,7 @@
       },
     },
     "apps/desktop": {
-      "name": "@transvibe/desktop",
+      "name": "@transpoze-app/desktop",
       "version": "0.1.0",
       "dependencies": {
         "@tanstack/react-query": "^5.83.0",
@@ -267,7 +267,7 @@
 
     "@tauri-apps/plugin-shell": ["@tauri-apps/plugin-shell@2.3.0", "", { "dependencies": { "@tauri-apps/api": "^2.6.0" } }, "sha512-6GIRxO2z64uxPX4CCTuhQzefvCC0ew7HjdBhMALiGw74vFBDY95VWueAHOHgNOMV4UOUAFupyidN9YulTe5xlA=="],
 
-    "@transvibe/desktop": ["@transvibe/desktop@workspace:apps/desktop"],
+    "@transpoze-app/desktop": ["@transpoze-app/desktop@workspace:apps/desktop"],
 
     "@types/babel__core": ["@types/babel__core@7.20.5", "", { "dependencies": { "@babel/parser": "^7.20.7", "@babel/types": "^7.20.7", "@types/babel__generator": "*", "@types/babel__template": "*", "@types/babel__traverse": "*" } }, "sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA=="],
 
