@@ -1,9 +1,6 @@
 # Transpoze.app
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![macOS](https://img.shields.io/badge/macOS-supported-green.svg)
-![Linux](https://img.shields.io/badge/Linux-planned-yellow.svg)
-![Windows](https://img.shields.io/badge/Windows-planned-yellow.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![macOS](https://img.shields.io/badge/macOS-supported-green.svg) ![Linux](https://img.shields.io/badge/Linux-planned-yellow.svg) ![Windows](https://img.shields.io/badge/Windows-planned-yellow.svg)
 
 > [!NOTE]
 > This app was vibe-coded in a single redbull-fueled and kebab-refueled evening.
@@ -18,13 +15,11 @@ A fast, modern desktop app for transcoding WebM videos to MP4 format. Built with
 
 ### Main Interface
 
-![Transpoze.app Main Interface](content/main.png)
-*Drag and drop your WebM files and choose from optimized quality presets*
+![Transpoze.app Main Interface](content/main.png) *Drag and drop your WebM files and choose from optimized quality presets*
 
 ### Settings
 
-![Transpoze.app Settings](content/settings.png)
-*Customize output location, file naming patterns, and display preferences*
+![Transpoze.app Settings](content/settings.png) *Customize output location, file naming patterns, and display preferences*
 
 ## Goal
 

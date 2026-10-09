@@ -67,8 +67,7 @@
 
 ## Secret
 
-- [ ] Add PSP mode that will convert video to PSP format
-  something like this:
+- [ ] Add PSP mode that will convert video to PSP format something like this:
   - container: MP4 or AVI
   - video codec: MPEG-4, H.264
   - resolution: 480x272
