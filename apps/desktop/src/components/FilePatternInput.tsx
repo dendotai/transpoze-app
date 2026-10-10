@@ -84,8 +84,7 @@ export const FilePatternInput = forwardRef<FilePatternInputHandle, FilePatternIn
         // Extract the remaining part to suggest
         const suggestionText = match.substring(partialVariable.length);
         
-        // Check if inserting the suggestion would create a valid variable
-        // without requiring deletion of existing text
+        // Check if inserting the suggestion would create a valid variable without requiring deletion of existing text
         const wouldComplete = partialVariable + suggestionText;
         
         // If the suggestion ends with } and afterCursor starts with }, that's ok
